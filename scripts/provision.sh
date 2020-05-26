@@ -10,8 +10,6 @@ domain=${realm%%.*}
 
 echo "Using realm=$realm and domain=$domain." >&2
 
-setenforce 0
-
 > /etc/krb5.conf
 
 rm -fv /etc/samba/smb.conf

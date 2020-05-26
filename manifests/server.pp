@@ -1,7 +1,6 @@
 package { [
     'ctdb',
     'libsmbclient',
-    'libwbclient',
     'samba',
     'samba-common',
     'samba-common-bin',
