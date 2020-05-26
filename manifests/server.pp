@@ -5,6 +5,11 @@ package { [
     'samba-common',
     'samba-common-bin',
     'samba-libs',
+    'winbind',
+    'libpam-winbind',
+    'libnss-winbind',
+    'krb5-kdc',
+    'libpam-krb5',
     'rsync',
   ]:
   ensure => installed,

@@ -26,27 +26,27 @@ Vagrant.configure(2) do |config|
 #      :path => "scripts/sssd.sh"
   end
 
-#  config.vm.define "dc2" do |dc2|
-#    dc2.vm.box = "roboxes/ubuntu2004"
-#    dc2.vm.hostname = "dc2.samba4.local"
-#
-#    dc2.vm.provider :virtualbox do |vb|
-#      vb.memory = "1024"
-#      vb.name = "dc1.samba4.local"
-#    end
-#
-#    dc2.vm.provider :libvirt do |libvirt|
-#      libvirt.memory = "4096"
-#    end
-#
-#    dc2.vm.provision :shell,
-#      :path => "scripts/server.sh"
-#    dc2.vm.provision :shell,
-#      :path => "scripts/secondary.sh",
-#      :args => [ adminpass ]
+  config.vm.define "dc2" do |dc2|
+    dc2.vm.box = "roboxes/ubuntu2004"
+    dc2.vm.hostname = "dc2.samba4.local"
+
+    dc2.vm.provider :virtualbox do |vb|
+      vb.memory = "1024"
+      vb.name = "dc2.samba4.local"
+    end
+
+    dc2.vm.provider :libvirt do |libvirt|
+      libvirt.memory = "4096"
+    end
+
+    dc2.vm.provision :shell,
+      :path => "scripts/server.sh"
+    dc2.vm.provision :shell,
+      :path => "scripts/secondary.sh",
+      :args => [ adminpass ]
 #    dc2.vm.provision :shell,
 #      :path => "scripts/sssd.sh"
-#  end
+  end
 #
 #  config.vm.define "client" do |client|
 #    client.vm.box = "eurolinux-vagrant/centos-8"
