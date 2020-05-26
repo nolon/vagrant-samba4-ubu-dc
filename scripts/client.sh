@@ -3,7 +3,7 @@
 set -e
 
 yum --nogpgcheck -y install \
-    http://yum.puppet.com/puppet6/puppet6-release-el-7.noarch.rpm \
+    http://yum.puppet.com/puppet6/puppet6-release-el-8.noarch.rpm \
     epel-release
 yum -y install puppet-agent
 
