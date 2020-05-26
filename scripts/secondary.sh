@@ -45,6 +45,6 @@ samba-tool domain join "$realm" DC \
 echo -e 'Host dc1\n  StrictHostKeyChecking no' >> /root/.ssh/config
 rsync -zavHPXA dc1:/var/lib/samba/sysvol/. /var/lib/samba/sysvol/.
 
-puppet resource service samba ensure=running enable=true
+puppet resource service samba-ad-dc ensure=running enable=true
 
 echo "nameserver 0.0.0.0" >> /etc/resolv.conf
