@@ -24,7 +24,7 @@ samba-tool domain provision \
 cp -fv /var/lib/samba/private/krb5.conf /etc/krb5.conf
 sed -i -e '/^nameserver/s/\s\+.*$/ 0.0.0.0/' /etc/resolv.conf
 
-puppet resource service samba ensure=running enable=true
+puppet resource service samba-ad-dc ensure=running enable=true
 
 set +e
 while [ -z "$dc2" ] ; do
